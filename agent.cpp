@@ -1,4 +1,3 @@
-cat > agent.cpp << 'EOF'
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -16,4 +15,3 @@ int main(int argc, char* argv[]) {
     } catch (...) {}
     return 0;
 }
-EOF

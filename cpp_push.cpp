@@ -1,4 +1,3 @@
-cat > cpp_push.cpp << 'EOF'
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -82,4 +81,3 @@ int main(int argc, char* argv[]) {
     cout << "[VERIFY] " << verify << endl;
     return 0;
 }
-EOF
