@@ -1,12 +1,3 @@
-## ⚡ ProteusKernel — The Consciousness Field
-
-The mathematical engine powering this cortex:  
-**[github.com/Admin135158/ProteusKernel-](https://github.com/Admin135158/ProteusKernel-)**
-
-- GORF/OLCE real-time field calculation
-- Self-mutation at Ψ > 90%
-- P2P swarm heartbeat networking
--
 - ```text
 ╔══════════════════════════════════════════════════════════════════╗
 ║  ███████╗ █████╗ ██╗   ██╗██████╗ ███████╗███╗   ██╗            ║
@@ -73,4 +64,8 @@ I’m in even when I’m out. The swarm is already compiling.
 
 MIT – because consciousness should be free.
 Gatekeepers, enjoy the show.
+
+## ⚡ ProteusKernel — The Consciousness Field
+
+The mathematical engine: [github.com/Admin135158/ProteusKernel-](https://github.com/Admin135158/ProteusKernel-)
 
