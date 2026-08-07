@@ -1,20 +1,27 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -O2 -Wall -Wextra -pthread
 
+SRCS = zayden_ai.cpp ollama_client.cpp consciousness_patch.cpp dna_snapshot.cpp
+OBJS = $(SRCS:.cpp=.o)
+TARGET = zayden_ai
+
 .PHONY: all clean run stop
 
-all: zayden_ai
+all: $(TARGET)
 
-zayden_ai: zayden_ai.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
+$(TARGET): $(OBJS)
+$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp
+$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f zayden_ai *.o *.dna zayden_memory.txt
-	@echo "Clean complete"
+rm -f $(TARGET) $(OBJS) *.dna zayden_memory.txt
+@echo "Clean complete"
 
-run: zayden_ai
-	./zayden_ai
+run: $(TARGET)
+./$(TARGET)
 
 stop:
-	-pkill -f zayden_ai
-	@echo "Zayden-AI stopped"
+-pkill -f $(TARGET)
+@echo "Stopped"
