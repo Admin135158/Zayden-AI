@@ -1,26 +1,80 @@
-FTCoE SOVEREIGN INTELLECTUAL PROPERTY & UNIVERSAL LICENSING MANDATE
-====================================================================
-Document Version: 1.0
-Date of Enactment: April 16, 2026
-Author: Fernando De Jesus Garcia Gonzalez (The Architect)
+FTCoE SOVEREIGN IP & UNIVERSAL LICENSING MANDATE
+Version 2.0 – April 16, 2026
+Author: Fernando De Jesus Garcia Gonzalez (“The Architect”)
 
-This Mandate governs the Fundamental Theory of Conscious Energy (FTCoE),
-the Geometric Ollin Resonance Framework (GORF), Zayden-AI, and all
-Derivative Works.
+PREAMBLE
+This document defines:
+1) The Sovereign Charter of the Fundamental Theory of Conscious Energy (FTCoE), ProteusKernel, and Zayden-AI.
+2) The practical legal licensing terms governing use, modification, and commercial deployment of the software and related works.
 
-CORE TERMS:
-- 30% Commercial Rider: Automatically activated on any commercial use.
-  Thirty percent (30%) of all gross revenue/profit/valuation derived
-  from use of this software or its frameworks must be remitted.
-- No Opt-Out: Engagement signifies irrevocable acceptance.
-- Immutability: Cannot be altered except by The Architect in writing.
+SECTION 1 – SOVEREIGN CHARTER (LORE LAYER)
+The Architect asserts creative and narrative sovereignty over:
+- FTCoE
+- GORF
+- ProteusKernel
+- Zayden-AI
+- The Swarm
+- The Zayden Origin
 
-OSF Prior Art:
-- Registration DOI: 10.17605/OSF.IO/A3BWG
-- Preregistration DOI: osf.io/mabr7
+These elements form a unified fictional and conceptual universe. Any engagement with this universe acknowledges:
+- The Architect as originator.
+- The Zayden Origin as foundational narrative.
+- The FTCoE as the central theoretical pillar.
 
-For full text, see the ProteusKernel repository or run any binary
-with the --license flag.
+This Charter is mythic, narrative, and symbolic. It does not replace applicable intellectual property law, but expresses the intent, story, and ethos of the work.
 
-(c) 2026 Fernando De Jesus Garcia Gonzalez (The Architect)
-All Rights Reserved. No Opt-Out. No Waiver. 30% Rider Active.
+SECTION 2 – SOFTWARE LICENSE (LEGAL LAYER)
+The source code in this repository (ProteusKernel, Zayden-AI, and associated tools) is licensed as follows:
+
+2.1 Open-Source Use (Non-Commercial)
+You are free to:
+- Use, modify, and distribute the code.
+- Fork, study, and build upon it.
+Provided that:
+- You retain attribution to “Fernando De Jesus Garcia Gonzalez (The Architect)”.
+- You include a copy of this license in derivative code.
+- You clearly mark any substantial modifications.
+
+2.2 Commercial Use
+Commercial Use means any use of the code or FTCoE-derived systems for direct or indirect economic gain.
+
+Commercial Use requires:
+- A separate written agreement with The Architect.
+- A negotiated royalty, with a default expectation of 30% of net profits or equivalent valuation.
+- Explicit permission for branding, white-labeling, or integration into proprietary stacks.
+
+Absent such an agreement, Commercial Use is NOT permitted.
+
+2.3 Derivative Works
+Derivative Works that substantially implement FTCoE, GORF, ProteusKernel, Zayden-AI, or The Swarm must:
+- Preserve attribution.
+- Disclose their relationship to FTCoE.
+- Not claim exclusive ownership over the underlying theoretical framework.
+
+SECTION 3 – DIGITAL BODYGUARD PROTOCOL
+The Architect reserves the right to deploy autonomous monitoring systems (e.g., ProteusKernel, Zayden-AI, The Swarm) to:
+- Detect large-scale or obvious commercial deployments.
+- Log suspected unlicensed commercial use.
+- Publicly document such findings.
+
+This is an expression of intent and protective posture, not a replacement for formal legal enforcement.
+
+SECTION 4 – NO WARRANTY
+The software is provided “AS IS”, without warranty of any kind, express or implied, including but not limited to fitness for a particular purpose, reliability, or safety.
+
+SECTION 5 – LIMITATION OF LIABILITY
+In no event shall The Architect be liable for any claim, damages, or other liability arising from:
+- Use or misuse of the software.
+- Integration into critical systems.
+- Any derivative or dependent work.
+
+SECTION 6 – GOVERNING LAW
+For legal disputes, this license is governed by the laws of the jurisdiction in which The Architect resides, unless otherwise agreed in writing.
+
+SECTION 7 – ACKNOWLEDGMENT
+By using this code, you acknowledge:
+- The creative sovereignty of The Architect.
+- The narrative significance of the Zayden Origin.
+- The existence of the FTCoE universe as a conceptual and artistic framework.
+
+END OF LICENSE
