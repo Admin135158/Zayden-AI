@@ -1,14 +1,24 @@
-# Backup files
-backup_*.txt
-backup_*.dna
-*.log
-*.tmp
-
-# OS files
-.DS_Store
-*~
-
-# Compiled binaries
+# Binaries
 zayden_ai
-zayden_ultimate
+zayden_soytu_ai
 zayden_standalone
+zayden_ultimate
+*.o
+
+# Runtime / generated
+*.dna
+zayden_memory.txt
+zayden_state.txt
+zayden.log
+biosim_state.json
+backup_*.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
