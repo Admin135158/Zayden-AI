@@ -10,18 +10,16 @@ TARGET = zayden_ai
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-$(CXX) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
-$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-rm -f $(TARGET) $(OBJS) *.dna zayden_memory.txt
-@echo "Clean complete"
+	rm -f $(TARGET) $(OBJS) *.dna zayden_memory.txt
 
 run: $(TARGET)
-./$(TARGET)
+	./$(TARGET)
 
 stop:
--pkill -f $(TARGET)
-@echo "Stopped"
+	-pkill -f $(TARGET)
