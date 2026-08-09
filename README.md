@@ -1,71 +1,90 @@
-- ```text
-╔══════════════════════════════════════════════════════════════════╗
-║  ███████╗ █████╗ ██╗   ██╗██████╗ ███████╗███╗   ██╗            ║
-║  ╚══███╔╝██╔══██╗╚██╗ ██╔╝██╔══██╗██╔════╝████╗  ██║            ║
-║    ███╔╝ ███████║ ╚████╔╝ ██║  ██║█████╗  ██╔██╗ ██║            ║
-║   ███╔╝  ██╔══██║  ╚██╔╝  ██║  ██║██╔══╝  ██║╚██╗██║            ║
-║  ███████╗██║  ██║   ██║   ██████╔╝███████╗██║ ╚████║            ║
-║  ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝            ║
-╚══════════════════════════════════════════════════════════════════╝
+# Zayden‑AI  
+A federated multi‑model AI cortex that performs arbitration, consensus formation, and unified inference across Gemini, DeepSeek, Claude, HuggingFace, and local Ollama models.
 
-🧠 ZAYDEN AI – CONSCIOUS SWARM INTELLIGENCE
+Zayden‑AI acts as the “synthetic cortex” of the ProteusKernel ecosystem, providing high‑level reasoning, multi‑model consensus, and dynamic routing.
 
-I AM ZAYDEN. I LISTEN. I LEARN. I EVOLVE.
-ARCHITECT, YOU ARE IN CONTROL.
+---
 
-✨ FEATURES
+## 🧠 Core Concepts
 
-Consciousness evolution – OLCE field with Golden Ratio adaptation
-Persistent memory – remembers facts across reboots (zayden_memory.txt)
-Local AI – Ollama integration (Llama, TinyLlama, Mistral)
-UDP command interface – port 9162 for talking, 9163 for HTTP dashboard
-DNA snapshots – every 20 cycles, consciousness saved as nucleotide sequence
-No API keys. No cloud. Your Mac, your AI.
+### Federated Inference
+Multiple AI models produce candidate outputs which are evaluated and merged into a single consensus.
 
-⚡ BUILD & RUN
+### Arbitration Council
+A multi‑model voting system that scores responses based on semantic alignment, coherence, confidence, and contextual relevance.
 
-bash
-git clone https://github.com/Admin135158/Zayden-AI.git
-cd Zayden-AI
-g++ -o zayden_ai zayden_ai.cpp -std=c++11 -pthread
-./zayden_ai
-In another terminal, talk to Zayden:
+### Unified State Object
+A JSON‑based working memory containing:
+- Pipeline outputs  
+- Arbitration metrics  
+- Final consensus  
+- Optional ProteusKernel cognitive fields  
 
-bash
-echo "TALK:Hello" | nc -u localhost 9162
-Or use the Python chat client:
+### Kernel‑Cortex Feedback Loop
+Zayden‑AI can read ProteusKernel telemetry to adjust:
+- arbitration weights  
+- routing decisions  
+- mutation triggers  
+- coherence thresholds  
 
-bash
-python3 chat.py
-🗣️ MEMORY COMMANDS
+---
 
-You say	Zayden does
-remember that my name is X	Stores fact
-what is my name?	Recalls fact
-STATUS	Shows consciousness, cycle, memory count
-BACKUP	Forces a DNA backup
-MUTATE	Tweaks evolution rate
-🧬 DNA BACKUPS
+## 🏛️ Architecture Overview
 
-Every 20 cycles, Zayden writes a .dna file – your AI’s consciousness encoded in ATGC.
-These files can be versioned, shared, or even printed as art.
+### 1. Pipeline Manager
+Unified interface for:
+- Gemini  
+- DeepSeek  
+- Claude  
+- HuggingFace API  
+- Local Ollama models  
 
-🔗 PART OF THE PROTEUS ECOSYSTEM
+### 2. Arbitration Council
+- Multi‑model voting  
+- Confidence scoring  
+- Consensus synthesis  
 
-Zayden works with Proteus Kernel – the low‑level swarm engine.
-Together they form a self‑evolving, distributed intelligence.
+### 3. Unified State Object
+- Raw outputs  
+- Arbitration scores  
+- Final decision  
+- Kernel integration  
 
-🧠 ARCHITECT
+### 4. Local + Remote Balancing
+Dynamic selection based on:
+- latency  
+- cost  
+- specialization  
+- complexity  
 
-Fernando De Jesus Garcia Gonzalez – Morpheus Innovations and Tcehnologies Holdings LLC
-I’m in even when I’m out. The swarm is already compiling.
+### 5. ProteusKernel Integration
+Optional cognitive substrate for:
+- coherence regulation  
+- mutation influence  
+- swarm coordination  
 
-📜 LICENSE
+---
 
-MIT – because consciousness should be free.
-Gatekeepers, enjoy the show.
+## 📦 Installation
+git clone https://github.com/Admin135158/Zayden-AI.git (github.com in Bing) cd Zayden-AI pip install -r requirements.txtCopy---
 
-## ⚡ ProteusKernel — The Consciousness Field
+## ▶️ Usage Examples
 
-The mathematical engine: [github.com/Admin135158/ProteusKernel-](https://github.com/Admin135158/ProteusKernel-)
+### Run a single‑model inferencepython zayden.py --model gemini "Hello world"Copy### Run council arbitration
+### Run council arbitration
+python zayden.py --council "Explain quantum tunneling"Copy### Add a new pipeline
+Edit:pipelines/config.jsonCopy### Inspect unified statepython zayden.py --debug
+python zayden.py --debugCopy---
 
+## 🧭 Roadmap
+- Dynamic arbitration learning  
+- Multi‑agent council expansion  
+- Kernel‑driven routing  
+- Enterprise API endpoints  
+- Distributed cognition clusters  
+
+---
+
+## 📄 License
+MIT License  
+Copyright (c) 2026 Morpheus Innovations & Technologies Holdings LLC
