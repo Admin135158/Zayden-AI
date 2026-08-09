@@ -1,24 +1,25 @@
-# Binaries
-zayden_ai
-zayden_soytu_ai
-zayden_standalone
-zayden_ultimate
+# Build artifacts
 *.o
+*.out
+*.exe
+*.bin
+build/
 
-# Runtime / generated
-*.dna
-zayden_memory.txt
-zayden_state.txt
-zayden.log
-biosim_state.json
-backup_*.txt
+# Runtime
+*.log
+oracle.pid
 
-# Python
+# Genetic graveyard (never commit dead genes)
+zayden_soytu_ai/genes/genes/graveyard/
+
+# Archive
+archive/
+
+# Python cache
 __pycache__/
 *.pyc
+.pytest_cache/
 
-# Editor
-.vscode/
-.idea/
-*.swp
-*~
+# Secrets
+.env
+*.key
