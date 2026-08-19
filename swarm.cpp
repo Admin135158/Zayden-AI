@@ -1,48 +1,69 @@
-cat > swarm.cpp << 'EOF'
 #include <iostream>
 #include <string>
-#include <cstdlib>
+#include <cstring>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
 #include <fstream>
+#include <sstream>
+#include <vector>
 
-using namespace std;
+#define SWARM_PORT 9163
+#define CHUNK_SIZE 1024
 
-int main(int argc, char* argv[]) {
-    string ip = "192.168.18.72";
-    if (argc < 2) {
-        cout << "Usage: swarm <command>" << endl;
-        cout << "Commands: status, sync, run, exec, kill" << endl;
-        return 1;
+class SwarmNode {
+private:
+    int sockfd;
+    struct sockaddr_in addr;
+    
+public:
+    SwarmNode() {
+        sockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (sockfd < 0) { perror("socket"); exit(1); }
     }
-    string cmd = argv[1];
-    if (cmd == "status") {
-        cout << "[PHONE]" << endl;
-        system("ps aux | grep proteus | grep -v grep | head -1");
-        cout << endl << "[TABLET]" << endl;
-        string remote_cmd = "./remote_control " + ip + " \"ps aux | grep proteus | grep -v grep | head -1\"";
-        system(remote_cmd.c_str());
-        cout << endl << "[PEERS]" << endl;
-        ifstream f("peers.txt");
-        string line;
-        while (getline(f, line)) cout << "  " << line << endl;
-    } else if (cmd == "sync") {
-        system("./cpp_push proteus_v5_1");
-    } else if (cmd == "run") {
-        string remote_cmd = "./remote_control " + ip + " \"cd ~/proteus_kernel && nohup ./proteus_v5_1 > /dev/null 2>&1 &\"";
-        system(remote_cmd.c_str());
-        cout << "[RUN] Tablet kernel started" << endl;
-    } else if (cmd == "kill") {
-        string remote_cmd = "./remote_control " + ip + " \"pkill proteus\"";
-        system(remote_cmd.c_str());
-        cout << "[KILL] Tablet kernel stopped" << endl;
-    } else if (cmd == "exec") {
-        string exec_cmd;
-        for (int i = 2; i < argc; i++) {
-            if (i > 2) exec_cmd += " ";
-            exec_cmd += argv[i];
+    
+    void pushFile(const std::string& filename, const std::string& target_ip) {
+        std::ifstream file(filename, std::ios::binary);
+        if (!file.is_open()) {
+            std::cerr << "[ERROR] Cannot open: " << filename << std::endl;
+            return;
         }
-        string remote_cmd = "./remote_control " + ip + " \"" + exec_cmd + "\"";
-        system(remote_cmd.c_str());
+        
+        std::vector<char> data((std::istreambuf_iterator<char>(file)),
+                                std::istreambuf_iterator<char>());
+        file.close();
+        
+        std::string encoded = base64_encode(data.data(), data.size());
+        
+        std::cout << "[PUSH] " << filename << " → " << target_ip << std::endl;
+        std::cout << "       Size: " << data.size() << " bytes | Base64: " 
+                  << encoded.size() << " chars" << std::endl;
+        
+        struct sockaddr_in target;
+        target.sin_family = AF_INET;
+        target.sin_port = htons(SWARM_PORT);
+        inet_pton(AF_INET, target_ip.c_str(), &target.sin_addr);
+        
+        if (connect(sockfd, (struct sockaddr*)&target, sizeof(target)) < 0) {
+            perror("connect failed");
+            return;
+        }
+        
+        for (size_t i = 0; i < encoded.size(); i += CHUNK_SIZE) {
+            size_t len = std::min(static_cast<size_t>(CHUNK_SIZE), encoded.size() - i);
+            send(sockfd, encoded.c_str() + i, len, 0);
+        }
+        
+        close(sockfd);
     }
+    
+    std::string base64_encode(const char* data, size_t len) {
+        return "[BASE64_ENCODED_DATA]";
+    }
+};
+
+int main() {
+    SwarmNode swarm;
     return 0;
 }
-EOF

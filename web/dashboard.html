@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proteus Kernel Dashboard</title>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: monospace; background: #0F111A; color: #fff; margin: 0; padding: 0; }
+    .nav { background: #1A1C26; display: flex; overflow-x: auto; border-bottom: 1px solid #333; }
+    .nav button { background: transparent; border: none; color: #888; padding: 15px 20px; cursor: pointer; font-size: 14px; flex: 1; }
+    .nav button.active { color: #00FFFF; border-bottom: 2px solid #00FFFF; }
+    .tab { display: none; padding: 15px; }
+    .tab.active { display: block; }
+    .card { background: #1A1C26; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; }
+    td, th { padding: 8px; text-align: left; border-bottom: 1px solid #333; color: #ccc; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+    .badge.active { background: green; color: white; }
+    .badge.offline { background: red; color: white; }
+    input[type="text"] { width: 100%; background: #1A1C26; border: 1px solid #333; color: #fff; padding: 12px; border-radius: 6px; }
+    button.send { background: #00FFFF; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .log { color: #ccc; padding: 4px 0; border-bottom: 1px solid #222; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <button onclick="switchTab('overview')" class="active">Overview</button>
+    <button onclick="switchTab('heartbeat')">Heartbeat</button>
+    <button onclick="switchTab('swarm')">Swarm</button>
+    <button onclick="switchTab('ledger')">Ledger</button>
+    <button onclick="switchTab('messages')">Messages</button>
+    <button onclick="switchTab('command')">Command</button>
+  </div>
+
+  <div id="overview" class="tab active"><h3>Overview Stats</h3><div class="card" id="stats">Loading...</div></div>
+  <div id="heartbeat" class="tab"><h3>Heartbeat Table</h3><table id="nodeTable"><thead><tr><th>ID</th><th>Status</th><th>Latency</th><th>Last Seen</th></tr></thead><tbody></tbody></table></div>
+  <div id="swarm" class="tab"><h3>Swarm Topology</h3><div class="card">Graph visualization placeholder (integrate vis.js later)</div></div>
+  <div id="ledger" class="tab"><h3>Ledger</h3><div id="ledgerList"></div></div>
+  <div id="messages" class="tab"><h3>Messages</h3><div id="msgList"></div></div>
+  <div id="command" class="tab"><h3>Command Console</h3><div id="cmdLog" style="height:200px; overflow-y:auto; background:#111; padding:10px; border-radius:6px; margin-bottom:10px;"></div>
+    <div style="display:flex; gap:10px;"><input type="text" id="cmdInput" placeholder="Ask Zayden... (e.g., show nodes, restart node-00)" /><button class="send" onclick="sendCommand()">Send</button></div>
+  </div>
+
+  <script>
+    // YOUR FIREBASE CONFIG
+    const firebaseConfig = {
+      apiKey: "AIzaSyAywCmgYfuIlLGohFZJsk0xxRp51etnQto",
+      authDomain: "proteus-mesh-core-dd2e1.firebaseapp.com",
+      projectId: "proteus-mesh-core-dd2e1",
+      storageBucket: "proteus-mesh-core-dd2e1.firebasestorage.app",
+      messagingSenderId: "963635936752",
+      appId: "1:963635936752:web:2318bbd73fd15d66d73135",
+      measurementId: "G-001H5HF5JF"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    function switchTab(id) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Heartbeat Listener
+    db.collection('nodes').onSnapshot(snap => {
+      const tbody = document.querySelector('#nodeTable tbody');
+      tbody.innerHTML = '';
+      let activeCount = 0;
+      snap.forEach(doc => {
+        const d = doc.data();
+        if(d.status === 'active') activeCount++;
+        const row = `<tr>
+          <td>${doc.id}</td>
+          <td><span class="badge ${d.status}">${d.status || 'unknown'}</span></td>
+          <td>${d.latency || 'N/A'}ms</td>
+          <td>${d.lastHeartbeat || 'N/A'}</td>
+        </tr>`;
+        tbody.innerHTML += row;
+      });
+      document.getElementById('stats').innerHTML = `Active Nodes: <strong>${activeCount}</strong> | Total: ${snap.size}`;
+    });
+
+    // Ledger Listener
+    db.collection('ledger').orderBy('timestamp', 'desc').onSnapshot(snap => {
+      const el = document.getElementById('ledgerList');
+      el.innerHTML = '';
+      snap.forEach(doc => {
+        const d = doc.data();
+        el.innerHTML += `<div class="card"><b>${d.from}</b> → <b>${d.to}</b><br>Payload: ${d.payload || 'N/A'} <span style="font-size:10px;color:#888;">${d.timestamp?.toDate?.() || ''}</span></div>`;
+      });
+    });
+
+    // Messages Listener
+    db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snap => {
+      const el = document.getElementById('msgList');
+      el.innerHTML = '';
+      snap.forEach(doc => {
+        const d = doc.data();
+        el.innerHTML += `<div class="card"><b>${d.from}</b> to <b>${d.to}</b>: ${d.content}</div>`;
+      });
+    });
+
+    // Command Console
+    const cmdLog = document.getElementById('cmdLog');
+    const cmdInput = document.getElementById('cmdInput');
+
+    function sendCommand() {
+      const txt = cmdInput.value.trim();
+      if(!txt) return;
+      cmdLog.innerHTML = `<div class="log">You: ${txt}</div>` + cmdLog.innerHTML;
+      cmdInput.value = '';
+
+      if(txt.toLowerCase().includes('nodes') || txt.toLowerCase().includes('status')) {
+        db.collection('nodes').get().then(snap => {
+          let active = 0;
+          snap.forEach(d => { if(d.data().status === 'active') active++; });
+          cmdLog.innerHTML = `<div class="log">Zayden: ${active} active nodes.</div>` + cmdLog.innerHTML;
+        });
+      } else if(txt.toLowerCase().includes('restart')) {
+        const target = txt.split(' ').pop();
+        db.collection('commands').add({
+          command: 'restart',
+          target: target || 'node-00',
+          params: {},
+          status: 'pending',
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        cmdLog.innerHTML = `<div class="log">Zayden: Restart command sent to ${target || 'node-00'}.</div>` + cmdLog.innerHTML;
+      } else {
+        cmdLog.innerHTML = `<div class="log">Zayden: Command processed.</div>` + cmdLog.innerHTML;
+      }
+    }
+    cmdInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') sendCommand(); });
+  </script>
+</body>
+</html>

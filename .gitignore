@@ -23,3 +23,11 @@ __pycache__/
 # Secrets
 .env
 *.key
+
+# Proprietary runtime artifacts (DO NOT COMMIT)
+swarm
+zayden
+*.dna
+*.state
+zayden_hashes.txt
+zayden_memory.txt
