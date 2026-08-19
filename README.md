@@ -88,3 +88,15 @@ python zayden.py --debugCopy---
 ## 📄 License
 MIT License  
 Copyright (c) 2026 Morpheus Innovations & Technologies Holdings LLC
+
+---
+
+## ⚠️ Commercial Licensing Notice
+
+**Morpheus Innovations & Technologies Holdings LLC** owns the proprietary multi-agent kernel (`proteuskernel-`) and the offline intelligence mesh (`ElMalo`).
+
+- The **public MIT-licensed code** in this repo is strictly an API orchestrator and HOLO-invariant client.
+- The **core swarm engine**, **Digital Bodyguard**, and **offline mesh** are **not** open-source.
+- Commercial use, integration, or reverse-engineering of those proprietary components requires a signed license from Morpheus Innovations LLC.
+
+For inquiries: [fernando@morpheus-innovations.com](mailto:fernando@morpheus-innovations.com)
