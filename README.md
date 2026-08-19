@@ -37,24 +37,24 @@ graph LR
     B --> C[Gemini]
     B --> D[Claude]
     B --> E[DeepSeek]
-    B --> F[Ollama (Local)]
+    B --> F[Ollama]
     C --> G[Arbitration Council]
     D --> G
     E --> G
     F --> G
     G --> H[Unified State Object]
     H --> I[Consensus Output]
-    H --> J[HOLO Logs (Merkle)]
+    H --> J[HOLO Logs]
     J --> K[Web Dashboard]
 ```
 
-- **`zayden_holo/`** – Continuity engine client (submodule).
-- **`web/`** – Dashboard and live telemetry.
-- **`pipelines/`** – Model adapters and configuration.
+· zayden_holo/ – Continuity engine client (submodule).
+· web/ – Dashboard and live telemetry.
+· pipelines/ – Model adapters and configuration.
 
 ---
 
-## 📦 Quick Start
+📦 Quick Start
 
 ```bash
 # Clone the public orchestrator
@@ -74,11 +74,11 @@ python zayden.py --council "What is the future of distributed AI?"
 cd web && python app.py
 ```
 
-> ⚠️ Requires API keys for Gemini/Claude/DeepSeek (stored in `.env` – never commit them).
+⚠️ Requires API keys for Gemini/Claude/DeepSeek (stored in .env – never commit them).
 
 ---
 
-## 🗺️ Repository Structure (Public)
+🗺️ Repository Structure (Public)
 
 ```
 Zayden-AI/
@@ -96,47 +96,48 @@ Zayden-AI/
 
 ---
 
-## ⚠️ Commercial Licensing Notice
+⚠️ Commercial Licensing Notice
 
-**Morpheus Innovations & Technologies Holdings LLC** owns the proprietary multi‑agent kernel (`proteuskernel-`) and the offline intelligence mesh (`ElMalo`).
+Morpheus Innovations & Technologies Holdings LLC owns the proprietary multi‑agent kernel (proteuskernel-) and the offline intelligence mesh (ElMalo).
 
-- ✅ The **public MIT‑licensed code** in this repo is strictly an API orchestrator and HOLO‑invariant client.
-- ❌ The **core swarm engine**, **Digital Bodyguard**, **heartbeat protocols**, and **offline mesh** are **not** open‑source.
-- 🔒 Commercial use, integration, or reverse‑engineering of those proprietary components requires a signed license from Morpheus Innovations LLC.
+· ✅ The public MIT‑licensed code in this repo is strictly an API orchestrator and HOLO‑invariant client.
+· ❌ The core swarm engine, Digital Bodyguard, heartbeat protocols, and offline mesh are not open‑source.
+· 🔒 Commercial use, integration, or reverse‑engineering of those proprietary components requires a signed license from Morpheus Innovations LLC.
 
-**For licensing inquiries:**  
-📧 [fernando@morpheus-innovations.com](mailto:fernando@morpheus-innovations.com)
-
----
-
-## 🗓️ Roadmap (Public)
-
-- [ ] Dynamic arbitration learning (feedback loops)
-- [ ] Multi‑agent council expansion (10+ models)
-- [ ] Enterprise API endpoints (gRPC/REST)
-- [ ] Distributed cognition clusters (Horizontally scaled)
+For licensing inquiries:
+fernaaaathebeast@gmail.com
 
 ---
 
-## 📄 License (Public Part)
+🗓️ Roadmap (Public)
 
-MIT License – Copyright © 2026 Morpheus Innovations & Technologies Holdings LLC.  
-See the full license in [`LICENSE`](./LICENSE).
-
-*But remember: the proprietary kernel and ElMalo are NOT covered by this license.*
+☐ Dynamic arbitration learning (feedback loops)
+☐ Multi‑agent council expansion (10+ models)
+☐ Enterprise API endpoints (gRPC/REST)
+☐ Distributed cognition clusters (Horizontally scaled)
 
 ---
 
-## 🌟 Recognition
+📄 License (Public Part)
+
+MIT License – Copyright © 2026 Morpheus Innovations & Technologies Holdings LLC.
+See the full license in LICENSE.
+
+But remember: the proprietary kernel and ElMalo are NOT covered by this license.
+
+---
+
+🌟 Recognition
 
 This repository contains prior art (April 17, 2026) for:
-- **SYNC‑7 Swarm Protocol**
-- **Multi‑agent shared memory (HOLO)**
-- **Offline intelligence synthesis (ElMalo – Aug 12, 2026)**
 
-Read the full chronology in [`docs/PRIOR_ART.md`](./docs/PRIOR_ART.md).
+· SYNC‑7 Swarm Protocol
+· Multi‑agent shared memory (HOLO)
+· Offline intelligence synthesis (ElMalo – Aug 12, 2026)
+
+Read the full chronology in docs/PRIOR_ART.md.
 
 ---
 
-**Built with chaos, ordered by code.**  
+Built with chaos, ordered by code.
 © 2026 Morpheus Innovations & Technologies Holdings LLC.
