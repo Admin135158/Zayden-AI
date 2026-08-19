@@ -31,3 +31,12 @@ zayden
 *.state
 zayden_hashes.txt
 zayden_memory.txt
+
+# Proprietary runtime artifacts (DO NOT COMMIT)
+swarm
+zayden
+*.dna
+*.state
+zayden_hashes.txt
+zayden_memory.txt
+el_malo/
