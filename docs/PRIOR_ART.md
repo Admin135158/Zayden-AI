@@ -17,3 +17,12 @@ The components listed above – publicly available before their disclosure – d
 - **Heartbeat gossip** maintains coordination even under partial network partitions.
 
 This repository serves as **prior art** for the core problems and solutions now being discussed in the broader AI safety community.
+
+## Additional Proprietary Prior Art
+- **August 12-13, 2026** – `ElMalo` v1.0.0 BlackBox Intelligence Engine committed (standalone repo). Features:
+  - Deterministic chaos via Lorenz attractor + logistic map (world-state synthesis).
+  - System entropy harvested from `/proc` (no external APIs).
+  - 10 archetypal themes rotated by attractor basin.
+  - Zero network dependencies, zero API keys.
+  
+  This establishes prior art for **offline autonomous reasoning** and **entropy-driven multi-agent state synthesis**.
