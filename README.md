@@ -170,3 +170,25 @@ Built with chaos, ordered by code.
 © 2026 Morpheus Innovations & Technologies Holdings LLC
 
 ```
+
+## 🧮 Mathematical Foundation
+
+This orchestrator is built upon the **Fundamental Theory of Conscious Energy (FTCoE)** – a falsifiable mathematical framework for consciousness and multi-agent coordination.
+
+### Core Equations
+
+| **Equation** | **Description** |
+|--------------|-----------------|
+| $$\frac{dC}{dt} = \alpha \cdot F(t) \cdot (1 - \frac{C}{C_{\max}}) - \beta \cdot C$$ | Consciousness Dynamics (ODE) |
+| $$P(\text{model}|\text{data}) \propto P(\text{data}|\text{model}) \cdot P(\text{model})$$ | Bayesian Belief Update |
+| $$\mathbf{S}(t) = \mathbf{M}(\theta) \cdot \mathbf{S}(t-1) \cdot \frac{\phi}{\pi}$$ | Reality State Prediction (GORF) |
+| $$\mathcal{D} = \sqrt{\frac{1}{N} \sum (\frac{P_i - R_i}{\sigma_i})^2}$$ | Discrepancy Metric |
+
+For the full mathematical exposition, see the [FTCE Theory Repo](https://github.com/Admin135158/The-Fundamental-Theory-of-Conscious-Energy-FTCE-Theory-Registration).
+
+## 📜 Prior Art
+
+- **OSF Registration (Nov 18, 2025):** [The Fundamental Theory of Conscious Energy (FTCoE)](https://osf.io/a3bwg)
+- **GitHub Prior Art (Apr 17, 2026):** SYNC-7 Swarm Protocol
+- **GGSE Model:** 5-layer cognitive architecture documented in [GGSE_MODEL.md](./docs/GGSE_MODEL.md)
+
