@@ -100,3 +100,13 @@ Copyright (c) 2026 Morpheus Innovations & Technologies Holdings LLC
 - Commercial use, integration, or reverse-engineering of those proprietary components requires a signed license from Morpheus Innovations LLC.
 
 For inquiries: [fernando@morpheus-innovations.com](mailto:fernando@morpheus-innovations.com)
+
+## 🤝 Contributors
+
+- **[Admin135158](https://github.com/Admin135158)** – Founder, Lead Architect (ProteusKernel, SYNC‑7, Digital Bodyguard, ElMalo)
+- **[Deathburgerz013](https://github.com/Deathburgerz013)** – Creator of the **HOLO‑Invariant** continuity engine (append‑only logs, Merkle verification, tamper‑evident state)
+
+The HOLO‑Invariant engine is the backbone of our audit and compliance capabilities. We thank Deathburgerz013 for their foundational contribution.
+
+For a full list, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
+
