@@ -1,4 +1,4 @@
-# Contributors to Zayden‑AI / ProteusKernel
+# Contributors to Zayden-AI
 
 - **Admin135158** – Founder, Lead Architect  
   System architecture and integration.

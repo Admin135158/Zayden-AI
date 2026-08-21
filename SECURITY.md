@@ -30,7 +30,7 @@ You should receive a response within 48 hours. We will work with you to validate
 
 - Always run the latest stable version.
 - Keep your API keys and secrets in `.env` and never commit them.
-- Use the Digital Bodyguard module to monitor agent behavior in production.
+- Use the anti-sabotage module to monitor agent behavior in production.
 - Review HOLO audit logs regularly to detect anomalous activity.
 
 ## Acknowledgements

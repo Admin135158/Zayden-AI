@@ -40,3 +40,8 @@ zayden
 zayden_hashes.txt
 zayden_memory.txt
 el_malo/
+
+# Node dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/

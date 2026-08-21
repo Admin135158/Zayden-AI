@@ -114,7 +114,7 @@ For a full list, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 Morpheus Innovations & Technologies Holdings LLC owns the proprietary multi‑agent kernel (proprietary kernel) and the offline intelligence mesh (offline intelligence module).
 
 · ✅ The public MIT‑licensed code in this repo is strictly an API orchestrator and HOLO‑invariant client.
-· ❌ The core swarm engine, Digital Bodyguard, heartbeat protocols, and offline mesh are not open‑source.
+· ❌ The core swarm engine, anti-sabotage monitor, heartbeat protocols, and offline mesh are not open‑source.
 · 🔒 Commercial use, integration, or reverse‑engineering of those proprietary components requires a signed license from Morpheus Innovations LLC.
 
 For licensing inquiries:
