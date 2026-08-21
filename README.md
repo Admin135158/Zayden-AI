@@ -1,10 +1,12 @@
 # ⚡ Zayden‑AI  
-### *Federated Multi‑Model Cortex · Arbitration · HOLO‑Invariant Continuity*
+### *Federated Multi‑Model Cortex · Arbitration · Sovereign AI Infrastructure*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![OSF Registered](https://img.shields.io/badge/OSF-Registered-red.svg)](https://osf.io/a3bwg)
+[![Prior Art: Nov 2025](https://img.shields.io/badge/Prior%20Art-Nov%202025-purple.svg)](https://osf.io/a3bwg)
 [![Status: Production](https://img.shields.io/badge/Status-Production-brightgreen.svg)]()
-[![Prior Art: Apr 2026](https://img.shields.io/badge/Prior%20Art-Apr%202026-red.svg)](./docs/PRIOR_ART.md)
+[![Contributors](https://img.shields.io/github/contributors/Admin135158/Zayden-AI)](https://github.com/Admin135158/Zayden-AI/graphs/contributors)
 
 ---
 
@@ -12,7 +14,19 @@
 
 **Zayden‑AI** is the public‑facing, open‑source orchestrator for multi‑model AI inference. It acts as a **synthetic cortex** – taking queries, routing them to Gemini, Claude, DeepSeek, HuggingFace, or local Ollama models, and synthesizing a single, high‑quality consensus output via a **weighted Arbitration Council**.
 
-Think of it as the *voice* of the Proteus ecosystem – clean, modular, and licensed MIT for your own projects.
+It is the *voice* of the **Proteus Ecosystem** – a sovereign AI infrastructure developed by **Morpheus Innovations & Technologies Holdings LLC**.
+
+---
+
+## 📜 Sovereign IP & Prior Art
+
+**Morpheus Innovations LLC** asserts prior art in the field of multi‑agent coordination and conscious energy frameworks via:
+
+- **OSF Registration (Nov 18, 2025):** *The Fundamental Theory of Conscious Energy (FTCoE)* – Geometric Unification of Consciousness, Physics, and Reality. [View on OSF](https://osf.io/a3bwg)
+- **GitHub Prior Art (Apr 17, 2026):** SYNC‑7 Swarm Protocol – the first public implementation of a distributed multi‑agent heartbeat mesh.
+- **ElMalo (Aug 12‑13, 2026):** Offline intelligence engine with deterministic chaos (Lorenz attractor + logistic map) – no APIs, no network.
+
+All proprietary components are held as trade secrets by Morpheus Innovations LLC and are not covered by the MIT license.
 
 ---
 
@@ -25,11 +39,11 @@ Think of it as the *voice* of the Proteus ecosystem – clean, modular, and lice
 | **Unified State Object** | JSON working memory with pipeline outputs, arbitration metrics, and final decisions. |
 | **HOLO‑Invariant Continuity** | Tamper‑evident, append‑only logs (Merkle‑verified) – providing persistent, auditable memory across sessions. |
 | **Live Web Dashboard** | Real‑time telemetry, ledger viewer, and engine status (Flask/Vue frontend). |
-| **Kernel Telemetry Interface** | Can ingest kernel telemetry (optional) to adjust routing weights dynamically. |
+| **ProteusKernel Ready** | Can ingest kernel telemetry (optional) to adjust routing weights dynamically. |
 
 ---
 
-## 🏛️ Architecture (Public Layer)
+## 🏛️ Architecture 
 
 ```mermaid
 graph LR
@@ -48,7 +62,7 @@ graph LR
     J --> K[Web Dashboard]
 ```
 
-· zayden_holo/ – Continuity engine client (submodule).
+· zayden_holo/ – Continuity engine client (submodule, by Deathburgerz013).
 · web/ – Dashboard and live telemetry.
 · pipelines/ – Model adapters and configuration.
 
@@ -74,55 +88,45 @@ python zayden.py --council "What is the future of distributed AI?"
 cd web && python app.py
 ```
 
-⚠️ Requires API keys for Gemini/Claude/DeepSeek (stored in .env – never commit them).
-
+⚠️ Requires API keys for Gemini/Claude/DeepSeek
 ---
 
-🗺️ Repository Structure (Public)
+🗺️ Repository Structure
 
 ```
 Zayden-AI/
 ├── docs/
-│   └── PRIOR_ART.md          # 🔒 Legal timeline (Apr 2026 – present)
-├── zayden_holo/              # HOLO-Invariant client (submodule)
-├── zayden_soytu_ai/          # Legacy aggregator (retained for compatibility)
-├── web/                      # Dashboard & telemetry UI
-├── pipelines/                # Model adapters (Gemini, Claude, etc.)
-├── .gitignore                # Blocks binaries, secrets, .env
-├── ARCHITECTURE.md           # Deep dive into arbitration logic
-├── CONTRIBUTING.md           # Guidelines for open‑source contributors
-└── README.md                 # You are here.
+│   └── PRIOR_ART.md          
+├── zayden_holo/              
+├── zayden_soytu_ai/          
+├── web/                      
+├── pipelines/                
+├── .gitignore                
+├── ARCHITECTURE.md          
+├── CONTRIBUTING.md           
+├── ROADMAP.md                
+├── CHANGELOG.md              
+├── 
+├── CODE_OF_CONDUCT.md        
+└── README.md                 
 ```
 
 ---
 
-<<<<<<< HEAD
-For inquiries: [fernando@morpheus-innovations.com](mailto:fernando@morpheus-innovations.com)
-
-## 🤝 Contributors
-
-- **[Admin135158](https://github.com/Admin135158)** – Founder, Lead Architect (core architecture)
-- **[Deathburgerz013](https://github.com/Deathburgerz013)** – Creator of the **HOLO‑Invariant** continuity engine (append‑only logs, Merkle verification, tamper‑evident state)
-
-The HOLO‑Invariant engine is the backbone of our audit and compliance capabilities. We thank Deathburgerz013 for their foundational contribution.
-
-For a full list, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
-
-=======
 ⚠️ Commercial Licensing Notice
 
-Morpheus Innovations & Technologies Holdings LLC owns the proprietary multi‑agent kernel (proprietary kernel) and the offline intelligence mesh (offline intelligence module).
+Morpheus Innovations & Technologies Holdings LLC owns the proprietary multi‑agent kernel (ProteusKernel-) and the offline intelligence engine (ElMalo).
 
 · ✅ The public MIT‑licensed code in this repo is strictly an API orchestrator and HOLO‑invariant client.
-· ❌ The core swarm engine, anti-sabotage monitor, heartbeat protocols, and offline mesh are not open‑source.
+· ❌ The core swarm engine, Digital Bodyguard, heartbeat protocols, truce protocol, and offline mesh are not open‑source.
 · 🔒 Commercial use, integration, or reverse‑engineering of those proprietary components requires a signed license from Morpheus Innovations LLC.
 
 For licensing inquiries:
-fernaaaathebeast@gmail.com
+📧 fernando@morpheusinnovationstech.cc
 
 ---
 
-🗓️ Roadmap (Public)
+🗓️ Roadmap
 
 ☐ Dynamic arbitration learning (feedback loops)
 ☐ Multi‑agent council expansion (10+ models)
@@ -131,36 +135,38 @@ fernaaaathebeast@gmail.com
 
 ---
 
-📄 License (Public Part)
+🤝 Contributors
+
+· Admin135158 – Founder, Lead Architect (ProteusKernel, SYNC‑7, Digital Bodyguard, ElMalo)
+· Deathburgerz013 – Creator of the HOLO‑Invariant continuity engine (append‑only logs, Merkle verification, tamper‑evident state)
+
+For a full list, see CONTRIBUTORS.md.
+
+---
+
+🔗 Community & Documentation
+
+· Code of Conduct
+· Contributing Guidelines
+· Security Policy
+· Roadmap
+· Changelog
+· OSF Registration – FTCoE
+· Issue Tracker
+· Discussions
+
+---
+
+📄 License 
 
 MIT License – Copyright © 2026 Morpheus Innovations & Technologies Holdings LLC.
 See the full license in LICENSE.
 
-But remember: the proprietary kernel and offline intelligence module are NOT covered by this license.
-
----
-
-🌟 Recognition
-
-This repository contains prior art (April 17, 2026) for:
-
-· SYNC‑7 Swarm Protocol
-· Multi‑agent shared memory (HOLO)
-· Offline intelligence synthesis (offline intelligence module – Aug 12, 2026)
-
-Read the full chronology in docs/PRIOR_ART.md.
+But remember: the proprietary kernel and ElMalo are NOT covered by this license.
 
 ---
 
 Built with chaos, ordered by code.
-© 2026 Morpheus Innovations & Technologies Holdings LLC.
->>>>>>> 02c76ecfa0a464d450c8e0b5f70a601f9f6a2c99
-## 🔗 Community & Documentation
+© 2026 Morpheus Innovations & Technologies Holdings LLC
 
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
-- [Contributing Guidelines](./CONTRIBUTING.md)
-- [Security Policy](./SECURITY.md)
-- [Roadmap](./ROADMAP.md)
-- [Changelog](./CHANGELOG.md)
-- [Issue Tracker](https://github.com/Admin135158/Zayden-AI/issues)
-- [Discussions](https://github.com/Admin135158/Zayden-AI/discussions)
+```
