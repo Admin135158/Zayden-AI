@@ -19,14 +19,3 @@ The components listed above – publicly available before their disclosure – d
 This repository serves as **prior art** for the core problems and solutions now being discussed in the broader AI safety community.
 
 ## Additional Proprietary Prior Art
-- **August 12-13, 2026** – `ElMalo` v1.0.0 BlackBox Intelligence Engine committed (standalone repo). Features:
-  - Deterministic chaos via Lorenz attractor + logistic map (world-state synthesis).
-  - System entropy harvested from `/proc` (no external APIs).
-  - 10 archetypal themes rotated by attractor basin.
-  - Zero network dependencies, zero API keys.
-  
-  This establishes prior art for **offline autonomous reasoning** and **entropy-driven multi-agent state synthesis**.
-
-- **August 14, 2026** – HOLO‑Invariant continuity engine integrated (commit `9e2df18`).  
-  **Creator:** Deathburgerz013 ([GitHub](https://github.com/Deathburgerz013)).  
-  This module provides append‑only hash‑chained logs and Merkle tree proofs, solving the critical need for verifiable shared memory in multi‑agent systems.

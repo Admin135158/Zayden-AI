@@ -25,7 +25,7 @@ Think of it as the *voice* of the Proteus ecosystem – clean, modular, and lice
 | **Unified State Object** | JSON working memory with pipeline outputs, arbitration metrics, and final decisions. |
 | **HOLO‑Invariant Continuity** | Tamper‑evident, append‑only logs (Merkle‑verified) – providing persistent, auditable memory across sessions. |
 | **Live Web Dashboard** | Real‑time telemetry, ledger viewer, and engine status (Flask/Vue frontend). |
-| **ProteusKernel Ready** | Can ingest kernel telemetry (optional) to adjust routing weights dynamically. |
+| **Kernel Telemetry Interface** | Can ingest kernel telemetry (optional) to adjust routing weights dynamically. |
 
 ---
 
@@ -101,7 +101,7 @@ For inquiries: [fernando@morpheus-innovations.com](mailto:fernando@morpheus-inno
 
 ## 🤝 Contributors
 
-- **[Admin135158](https://github.com/Admin135158)** – Founder, Lead Architect (ProteusKernel, SYNC‑7, Digital Bodyguard, ElMalo)
+- **[Admin135158](https://github.com/Admin135158)** – Founder, Lead Architect (core architecture)
 - **[Deathburgerz013](https://github.com/Deathburgerz013)** – Creator of the **HOLO‑Invariant** continuity engine (append‑only logs, Merkle verification, tamper‑evident state)
 
 The HOLO‑Invariant engine is the backbone of our audit and compliance capabilities. We thank Deathburgerz013 for their foundational contribution.
@@ -111,7 +111,7 @@ For a full list, see [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 =======
 ⚠️ Commercial Licensing Notice
 
-Morpheus Innovations & Technologies Holdings LLC owns the proprietary multi‑agent kernel (proteuskernel-) and the offline intelligence mesh (ElMalo).
+Morpheus Innovations & Technologies Holdings LLC owns the proprietary multi‑agent kernel (proprietary kernel) and the offline intelligence mesh (offline intelligence module).
 
 · ✅ The public MIT‑licensed code in this repo is strictly an API orchestrator and HOLO‑invariant client.
 · ❌ The core swarm engine, Digital Bodyguard, heartbeat protocols, and offline mesh are not open‑source.
@@ -136,7 +136,7 @@ fernaaaathebeast@gmail.com
 MIT License – Copyright © 2026 Morpheus Innovations & Technologies Holdings LLC.
 See the full license in LICENSE.
 
-But remember: the proprietary kernel and ElMalo are NOT covered by this license.
+But remember: the proprietary kernel and offline intelligence module are NOT covered by this license.
 
 ---
 
@@ -146,7 +146,7 @@ This repository contains prior art (April 17, 2026) for:
 
 · SYNC‑7 Swarm Protocol
 · Multi‑agent shared memory (HOLO)
-· Offline intelligence synthesis (ElMalo – Aug 12, 2026)
+· Offline intelligence synthesis (offline intelligence module – Aug 12, 2026)
 
 Read the full chronology in docs/PRIOR_ART.md.
 

@@ -1,7 +1,7 @@
 # Contributors to Zayden‑AI / ProteusKernel
 
 - **Admin135158** – Founder, Lead Architect  
-  ProteusKernel, SYNC‑7 swarm protocol, Digital Bodyguard, ElMalo offline intelligence engine, and overall system integration.
+  System architecture and integration.
 
 - **Deathburgerz013** – HOLO‑Invariant Engine  
   Creator of the append‑only Merkle‑verified audit log, enabling tamper‑evident shared memory, compliance‑grade audit trails, and the HOLO continuity bridge.

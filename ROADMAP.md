@@ -1,6 +1,6 @@
 # Roadmap for Zayden‑AI / Proteus Ecosystem
 
-This document outlines the planned evolution of the Zayden‑AI and ProteusKernel projects. We prioritize features that bring enterprise‑grade reliability, security, and scalability to autonomous agent systems.
+This document outlines the planned evolution of the Zayden-AI project. We prioritize features that bring enterprise‑grade reliability, security, and scalability to autonomous agent systems.
 
 ## Q4 2026 (Short‑Term)
 
