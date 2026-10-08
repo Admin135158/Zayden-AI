@@ -45,3 +45,5 @@ el_malo/
 node_modules/
 */node_modules/
 */*/node_modules/
+secrets.py
+**/.env
