@@ -47,3 +47,7 @@ node_modules/
 */*/node_modules/
 secrets.py
 **/.env
+.env
+**/.env
+secrets.py
+**/secrets.py
