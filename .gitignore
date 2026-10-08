@@ -51,3 +51,7 @@ secrets.py
 **/.env
 secrets.py
 **/secrets.py
+.env
+**/.env
+secrets.py
+**/secrets.py
